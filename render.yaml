@@ -1,0 +1,15 @@
+# Render Blueprint：在 Render 選 New ➜ Blueprint，指向此 GitHub repo 即可自動部署
+services:
+  - type: web
+    name: tainan-line-broadcaster
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # --proxy-headers：Render 在前面做 HTTPS 終止，讓 Gradio 正確判斷為 https
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips="*"
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: GRADIO_ANALYTICS_ENABLED
+        value: "False"

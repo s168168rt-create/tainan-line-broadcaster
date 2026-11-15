@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e7c66">
+  <title>目前離線｜臺南開放資料 LINE 投放</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+         font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+         background:#f3f7f6;color:#17352f;padding:24px}
+    main{max-width:420px;width:100%;text-align:center;background:#fff;border-radius:20px;
+         padding:32px 24px;box-shadow:0 8px 30px rgba(14,124,102,.12)}
+    img{width:88px;height:88px;border-radius:20px}
+    h1{font-size:1.35rem;margin:16px 0 8px}
+    p{margin:0 0 20px;line-height:1.6;color:#4a6a63}
+    button{font:inherit;font-weight:600;color:#fff;background:#0e7c66;border:0;border-radius:12px;
+           padding:12px 28px;cursor:pointer;min-height:44px}
+    button:active{transform:scale(.98)}
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/pwa/icon-192.png" alt="">
+    <h1>目前沒有網路連線</h1>
+    <p>下載開放資料與傳送 LINE 訊息都需要網路。<br>請確認連線後再試一次。</p>
+    <button onclick="location.reload()">重新整理</button>
+  </main>
+</body>
+</html>
